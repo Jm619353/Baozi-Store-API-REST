@@ -7,9 +7,14 @@ import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 /**
  * Representa os itens do catálogo da loja.
+ * A anotação @JsonPropertyOrder define o contrato da API, garantindo uma 
+ * estrutura lógica e previsível para o consumidor do JSON.
  */
+@JsonPropertyOrder({ "id", "nome", "preco", "estoque" })
 @Entity
 public class Produto {
     @Id

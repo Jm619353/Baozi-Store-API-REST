@@ -6,10 +6,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 /*
  * Representa a entidade Cliente no domínio da aplicação.
  * Mapeia os dados dos consumidores para a tabela correspondente no banco de dados relacional.
+ * A anotação @JsonPropertyOrder define o contrato da API, garantindo uma 
+ * estrutura lógica e previsível para o consumidor do JSON.
  * */
+@JsonPropertyOrder({ "id", "nome", "clienteDesde" })
 @Entity
 public class Cliente {
 	

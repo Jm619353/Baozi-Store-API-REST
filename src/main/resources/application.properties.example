@@ -9,7 +9,7 @@ spring.application.name=api
 # serverTimezone=UTC: Garante a sincronia de horários entre a aplicação e o banco.
 
 # Dados da Conexao (Preencha com seus dados locais)
-spring.datasource.url=jdbc:mysql://localhost:3306/NOME_DO_SEU_BANCO?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.url=jdbc:mysql://localhost:3306/NOME_DO_SEU_BANCO?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
 
 # Credenciais de acesso ao serviço de banco de dados
 spring.datasource.username=SEU_USUARIO
